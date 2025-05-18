@@ -22,7 +22,7 @@ All LoRa packets follow a common structure:
 
 | Byte(s) | Field            | Description                                        |
 |---------|-----------------|----------------------------------------------------|
-| 0       | Protocol Version | Protocol version (0x01)                            |
+| 0       | Random Seed     | Random byte used as seed for encryption             |
 | 1       | Device Type     | Type of sensor (see [Sensor Types](#sensor-types)) |
 | 2-4     | Serial Number   | 3-byte unique identifier of the sensor             |
 | 5-6     | Battery Voltage | 2-byte battery voltage in millivolts               |
@@ -127,10 +127,10 @@ Total packet length: 11 bytes
 
 ```
 Raw bytes (hexadecimal): 
-01 01 AB CD EF 0E DC 03 09 C4 27 16 1A 40 XX
+3F 01 AB CD EF 0E DC 03 09 C4 27 16 1A 40 XX
 
 Decoded:
-- Protocol Version: 0x01
+- Random Seed: 0x3F (random)
 - Device Type: 0x01 (CLIMA)
 - Serial Number: 0xABCDEF
 - Battery Voltage: 0x0EDC = 3804 mV = 3.804V
@@ -145,10 +145,10 @@ Decoded:
 
 ```
 Raw bytes (hexadecimal): 
-01 02 12 34 56 0E 10 03 09 60 01 F4 1C 20 XX
+A2 02 12 34 56 0E 10 03 09 60 01 F4 1C 20 XX
 
 Decoded:
-- Protocol Version: 0x01
+- Random Seed: 0xA2 (random)
 - Device Type: 0x02 (CARBON)
 - Serial Number: 0x123456
 - Battery Voltage: 0x0E10 = 3600 mV = 3.6V
@@ -163,10 +163,10 @@ Decoded:
 
 ```
 Raw bytes (hexadecimal): 
-01 03 AA BB CC 0E 5C 07 08 98 27 2C 1B 58 00 C8 01 0E 00 64 00 C8 XX
+C7 03 AA BB CC 0E 5C 07 08 98 27 2C 1B 58 00 C8 01 0E 00 64 00 C8 XX
 
 Decoded:
-- Protocol Version: 0x01
+- Random Seed: 0xC7 (random)
 - Device Type: 0x03 (METEO)
 - Serial Number: 0xAABBCC
 - Battery Voltage: 0x0E5C = 3676 mV = 3.676V
@@ -185,10 +185,10 @@ Decoded:
 
 ```
 Raw bytes (hexadecimal): 
-01 51 12 34 56 0C E4 01 09 C4 XX
+7B 51 12 34 56 0C E4 01 09 C4 XX
 
 Decoded:
-- Protocol Version: 0x01
+- Random Seed: 0x7B (random)
 - Device Type: 0x51 (DIY_TEMP)
 - Serial Number: 0x123456
 - Battery Voltage: 0x0CE4 = 3300 mV = 3.3V
@@ -269,5 +269,3 @@ The METEO sensor reports individual rain amounts, which the Gateway accumulates 
 - `lastRainReset`: The timestamp of the last reset
 
 This allows tracking both current precipitation and daily accumulation.
-
-

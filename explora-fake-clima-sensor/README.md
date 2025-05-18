@@ -12,7 +12,6 @@ This project implements a temperature sensor using an ESP32 microcontroller with
 - **Fully compatible with expLORA CLIMA protocol**
 - **15-minute measurement interval**
 - **Data encryption** for secure transmission
-- **Battery voltage monitoring**
 
 ## Hardware Requirements
 
@@ -21,6 +20,7 @@ This project implements a temperature sensor using an ESP32 microcontroller with
 - DS18B20 temperature sensor
 - Power source (battery or USB)
 - Jumper wires for connections
+- Easiest to start with [Gateway Lite](https://pajenicko.cz/bezdratova-brana-explora-gateway-lite) hardware
 
 ## Pin Configuration
 
@@ -55,7 +55,7 @@ This project implements a temperature sensor using an ESP32 microcontroller with
    - The next two bytes store battery voltage in mV
    - Byte 7 indicates there are 3 values to follow (temperature, pressure, humidity)
    - Bytes 8-9 store temperature in hundredths of degrees Celsius
-   - Bytes 10-11 store pressure (set to 0 as not measured)
+   - Bytes 10-11 store pressure (set to 1000 as not measured)
    - Bytes 12-13 store humidity (set to 0 as not measured)
    - The final byte contains a checksum
 4. **Encryption**: The data packet is encrypted using the device key

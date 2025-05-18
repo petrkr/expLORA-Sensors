@@ -27,7 +27,7 @@ The expLORA Gateway is available in two versions:
   - Available at: [https://pajenicko.cz/bezdratova-brana-explora-gateway-lite](https://pajenicko.cz/bezdratova-brana-explora-gateway-lite)
 
 - **expLORA CLIMA** - temperature, humidity and air pressure sensor
-  - Available at: [https://pajenicko.cz/produkty/explora-clima](https://pajenicko.cz/produkty/explora-clima)
+  - Available at: [https://pajenicko.cz/bezdratovy-senzor-explora-clima](https://pajenicko.cz/bezdratovy-senzor-explora-clima)
 
 - **expLORA CLIMA OUTDOOR** - temperature, humidity and air pressure sensor in radiation shield
   - Available at: [https://pajenicko.cz/bezdratovy-senzor-explora-clima-outdoor](https://pajenicko.cz/bezdratovy-senzor-explora-clima-outdoor)

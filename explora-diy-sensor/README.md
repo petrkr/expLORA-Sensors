@@ -12,7 +12,6 @@ This project implements a custom temperature sensor using an ESP32 microcontroll
 - **Custom sensor type implementation** (0x51 - DIY DS18B20)
 - **15-minute measurement interval**
 - **Data encryption** for secure transmission
-- **Battery voltage monitoring**
 
 ## Hardware Requirements
 
@@ -21,6 +20,7 @@ This project implements a custom temperature sensor using an ESP32 microcontroll
 - DS18B20 temperature sensor
 - Power source (battery or USB)
 - Jumper wires for connections
+- Easiest to start with [Gateway Lite](https://pajenicko.cz/bezdratova-brana-explora-gateway-lite) hardware
 
 ## Pin Configuration
 
